@@ -4,7 +4,7 @@ import subprocess
 import os
 
 files = glob.glob('LOO/*/*')
-# 何番目がどのクラスなのかをあとから参照するために作成するファイル
+# A file to show the correspondance between number and file name.�
 with open('meaning.txt', 'a') as f:
     for i, file in enumerate(files):
         f.write(f'{i}, {file}\n')
