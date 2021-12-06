@@ -15,8 +15,8 @@ for i, file in enumerate(files):
 
     os.makedirs(output_dir)
     test_image = file.replace('LOO', 'TRAIN')
-    
-    shutil.move(test_image, f'outputs/{i}')
+
+    shutil.move(test_image, f'outputs/image/{i}')
     subprocess.run(f'python3 train.py TRAIN --output {output_dir} --model tf_efficientnetv2_s_in21ft1k --pretrained -b 64', shell=True)    
 
 
